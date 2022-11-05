@@ -1,0 +1,56 @@
+
+public class Solution {
+
+    public static void sumOfTwoArrays(int arr1[], int arr2[], int output[]) {
+    	//Your code goes here
+        int n=0;
+        if(arr1.length>=arr2.length)
+        {
+            n = arr1.length;
+        }
+        else
+        {
+            n = arr2.length;
+        }
+        int arr11[] = new int[n];
+        int arr22[] = new int[n];
+        int al = arr1.length-1;
+        int bl = arr2.length-1;
+        for(int i =n-1; i>=0; i--)
+        {
+            if(al>=0)
+            {
+                arr11[i] = arr1[al--];
+            }
+            if(bl>=0)
+            {
+                arr22[i] = arr2[bl--];
+            }
+        }
+        
+        // int output[] = new int[n+1];
+        int k = output.length-1;
+            int carry =0;
+        for(int i=n-1; i>=0; i--)
+        {
+            int sum = arr11[i] + arr22[i] + carry;
+            carry =0;
+            if(sum>9)
+            {
+                carry = sum/10;
+                sum = sum%10;
+                
+            }
+            output[k] = sum;
+            k--;
+            if(i==0 && carry!=0)
+            {
+                output[k] = carry;
+            }
+
+        }
+        
+    }
+  
+
+}
