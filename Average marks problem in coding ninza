@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Solution {
+
+
+	public static void main(String[] args) {
+		
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+
+        Scanner sc = new Scanner(System.in) ;
+        char ch = sc.next().charAt(0) ;
+        int a = sc.nextInt() ;
+        int b = sc.nextInt() ;
+        int c = sc.nextInt() ;
+        
+    
+            System. out. println(ch) ;
+            System.out.println((a+b+c)/3) ;
+        
+            
+        
+		
+	}
+
+}
